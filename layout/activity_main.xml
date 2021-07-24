@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<TextView
+		android:id="@+id/text_title"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:text="It's Time To Show Your Might!!"
+		android:textAlignment="center"
+		android:textColor="@color/black"
+		android:textSize="24sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<ImageView
+		android:id="@+id/image_background"
+		android:layout_width="match_parent"
+		android:layout_height="150dp"
+		android:layout_marginTop="8dp"
+		android:scaleType="centerCrop"
+		app:layout_constraintBottom_toTopOf="@+id/main_grid"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/text_title"
+		app:srcCompat="@drawable/background" />
+
+	<GridLayout
+		android:id="@+id/main_grid"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerInParent="true"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="16dp"
+		android:columnCount="3"
+		android:rowCount="4"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+
+		app:layout_constraintTop_toBottomOf="@+id/image_background">
+
+		<TextView
+			android:id="@+id/text_name1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_row="0"
+			android:layout_column="0"
+			android:layout_gravity="center"
+			android:text="Player 1"
+			android:textAlignment="center" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_row="0"
+			android:layout_column="1"
+			android:text=" "
+			android:textAlignment="center" />
+
+		<TextView
+			android:id="@+id/text_name2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_row="0"
+			android:layout_column="2"
+			android:layout_gravity="center"
+			android:text="Player 2"
+			android:textAlignment="center" />
+
+
+		<ImageView
+			android:id="@+id/image_player1"
+			android:layout_width="150dp"
+			android:layout_height="150dp"
+			android:layout_row="1"
+			android:layout_column="0"
+			android:layout_gravity="left"
+			app:srcCompat="@drawable/cavalry" />
+
+		<ImageView
+			android:id="@+id/image_vs"
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:layout_row="1"
+			android:layout_column="1"
+			android:layout_gravity="center"
+			app:srcCompat="@drawable/vs" />
+
+		<ImageView
+			android:id="@+id/image_player2"
+			android:layout_width="150dp"
+			android:layout_height="150dp"
+			android:layout_row="1"
+			android:layout_column="2"
+			android:layout_gravity="right"
+			app:srcCompat="@drawable/infantry" />
+
+		<Button
+			android:id="@+id/button_cycle1"
+			android:layout_width="100dp"
+			android:layout_height="wrap_content"
+			android:layout_row="2"
+			android:layout_column="0"
+			android:layout_gravity="center"
+			android:text="Castle 1"
+			android:textSize="12sp" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_row="2"
+			android:layout_column="1"
+			android:text=" "
+			android:textAlignment="center" />
+
+		<Button
+			android:id="@+id/button_cycle2"
+			android:layout_width="100dp"
+			android:layout_height="wrap_content"
+			android:layout_row="2"
+			android:layout_column="2"
+			android:layout_gravity="center"
+			android:text="Castle 2"
+			android:textSize="12sp" />
+
+		<ImageView
+			android:id="@+id/image_win1"
+			android:layout_width="100dp"
+			android:layout_height="100dp"
+			android:layout_row="3"
+			android:layout_column="0"
+			android:layout_gravity="center"
+			app:srcCompat="@drawable/win" />
+
+		<TextView
+			android:id="@+id/text_vs2"
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:layout_row="3"
+			android:layout_column="1"
+			android:text=" "
+			android:textAlignment="center" />
+
+		<ImageView
+			android:id="@+id/image_win2"
+			android:layout_width="100dp"
+			android:layout_height="100dp"
+			android:layout_row="3"
+			android:layout_column="2"
+			android:layout_gravity="center"
+			app:srcCompat="@drawable/win" />
+
+	</GridLayout>
+
+	<Button
+		android:id="@+id/button_start"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:text="BATTLE"
+		android:textSize="24sp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/main_grid"
+		 />
+
+	<LinearLayout
+		android:id="@+id/linearlayout1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginEnd="16dp"
+		android:orientation="horizontal"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/button_start">
+
+
+		<TextView
+			android:id="@+id/text_info1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="left"
+			android:layout_weight="1"
+			android:text="Player 1" />
+
+
+		<TextView
+			android:id="@+id/text_info2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="Player 2"
+			android:textAlignment="textEnd" />
+
+	</LinearLayout>
+
+	<TextView
+		android:id="@+id/text_info"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:text="Detailed Text"
+		android:textAlignment="center"
+		android:textColor="@color/black"
+		android:textSize="18sp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/linearlayout1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
